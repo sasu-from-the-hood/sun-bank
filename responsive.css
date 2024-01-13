@@ -1,0 +1,35 @@
+@media (max-width: 920px) {
+  .movements {
+    height: 30vh;
+    flex: 0.8;
+  }
+  .app {
+    flex-direction: column-reverse;
+  }
+  .footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 730px) {
+  .movements {
+    height: 20vh;
+  }
+  .welcome {
+    font-size: 15px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .login__input {
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    width: 7rem;
+    margin-right: 1rem;
+  }
+  .balance__value {
+    font-size: 30px;
+  }
+  .balance__label {
+    font-size: 20px;
+  }
+}
