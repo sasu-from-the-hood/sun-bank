@@ -9,7 +9,6 @@ const labelSumOut = document.querySelector('.summary__value--out');
 const labelSumInterest = document.querySelector('.summary__value--interest');
 const lableDept = document.querySelector('.summary__value--debt');
 const labelTimer = document.querySelector('.timer');
-const labaleWithdrwalCode = document.querySelector('.js-withdrwal-code');
 const lableTransfer = document.querySelector('.js-transfer');
 const lableLoan = document.querySelector('.js-loan');
 const lableWithdrwal = document.querySelector('.js-withdrwal');
@@ -166,10 +165,7 @@ const startLogOutTimer = () => {
 ///////////////////////////////////////
 // Event handlers
 let currentAccount, timer;
-// Fake Always logged in
-// currentAccount = account1;
-// updateUI(currentAccount);
-// containerApp.style.opacity = 1;
+
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
@@ -259,6 +255,7 @@ btnTransfer.addEventListener('click', function (e) {
     timer = startLogOutTimer();
   }
 });
+
 withdrawBtn.addEventListener('click', function (e) {
   e.preventDefault();
   const amount = +inputWithdraw.value;
@@ -286,12 +283,12 @@ withdrawBtn.addEventListener('click', function (e) {
     const min = 100000;
     const max = 999999;
     setTimeout(() => {
-      labaleWithdrwalCode.innerHTML = `Take this code ${
+      lableWithdrwal.innerHTML = `Take this code ${
         Math.floor(Math.random() * (max - min + 1)) + min
       } and go to your nearest Sun bank ATM`;
     }, 1000);
     setTimeout(() => {
-      labaleWithdrwalCode.innerHTML = ``;
+      lableWithdrwal.innerHTML = ``;
     }, 10000);
     // Update UI
     updateUI(currentAccount);
